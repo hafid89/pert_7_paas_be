@@ -1,30 +1,15 @@
-# Dokumentasi
-File ini dibuat untuk membantu memahami konsep database dan ORM di Node.js menggunakan Sequelize.
+# Praktikum TCC 2025/2026
+Repo ini digunakan untuk materi praktikum TCC 2025/2026
 
-## Prerequisite
-1. Nodejs
-2. MySQL pake XAMPP
+## Yang harus dilakukan Praktikan : 
+Silahkan buka branch pada repo ini untuk melihat materinya.\
+Karena materi bakal di upload di branch yang ada.
 
-## Instalasi
-1. Setup projek node.js `npm init -y`
-2. install packagenya `npm install express mysql2 dotenv sequelize --save`
-3. install nodemon `npm i --save-dev nodemon`
+## Yang harus dilakukan kolaborator / Aslab (Asisten Lab) :
+Membuat materi jangan lupa dibuat branch dulu baru ngoding ya.\
+Format branch `<pertemuan>_<nama_materi>`, contoh `pert2_prisma` --> materi untuk pertemuan 2 tentang ORM Prisma .
 
-## Langkah Yang dilakukan
-1. Buat struktur foldernya dulu
-```
-config/ --> untuk  naruh config
-controllers/ --> untuk logika API nya
-models/ --> untuk query nya
-routes/ --> untuk route atau endopintnya
-schema/ --> untuk buat tabel database
-server.js --> untuk menjalankan server bisa juga index.js
-```
-2. Buat file `.env` isikan config mysqlnya
-3. Buat file config/database.js untuk konekin sequalizenya
-4. Buat file schema/User.js untuk membuat tabel nya
-5. Buat file models/userModels.js untuk querynya
-6. Buat file controllers/userController.js untuk logika API nya
-7. Buat file routes/userRoutes.js untuk route API nya
-8. Buat file index.js untuk menjalankan server
-9. Test API pake api.rest pake extenstion REST.API
+## List Materi : 
+1. Perkenalan TCC (Materi PPT doang)
+2. Membuat BE masih dilokal = Pake Sequelize atau Prisma untuk ORM
+3. Membuat BE dengan Cloud Storage
