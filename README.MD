@@ -26,6 +26,6 @@ Format branch `<pertemuan>_<nama_materi>`, contoh `pert2_prisma` --> materi untu
 
 ## Link Video Praktikum (yang saya bikin) :
 
-1. Prak TCC_Pert 1 - Perkenalan TCC dan IAM : [https://youtu.be/WLWoEUz3cpY?si=HFQ8e7YrnJdsI8BA](https://youtu.be/WLWoEUz3cpY?si=HFQ8e7YrnJdsI8BA)
-2. Prak TCC_Pert 2 - ORM Sequalize dan Prisma : [Video On Progress]()
+1. Prak TCC_Pert 1 - Perkenalan TCC dan IAM : [https://youtu.be/WLWoEUz3cpY](https://youtu.be/WLWoEUz3cpY)
+2. Prak TCC_Pert 2 - ORM Sequalize dan Prisma : [https://youtu.be/hXMKKPdKPHc](https://youtu.be/hXMKKPdKPHc)
 3. Prak TCC_Pert 3 - React FE dan Cloud Storage : [Video On Progress]()
