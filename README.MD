@@ -9,7 +9,10 @@ Karena materi bakal di upload di branch yang ada.
 
 ## Untuk yang mau Clone Repo :
 Untuk clone bisa, clone per branch dengan command `git clone --branch <nama_branch> https://github.com/Simad9/praktikum_tcc_2025-2026` \
-Contoh command misal mau clone branch pert2_prisma maka commandnya `git clone --branch pert2_prisma https://github.com/Simad9/praktikum_tcc_2025-2026`\
+Contoh command misal mau clone branch pert2_sequelize maka commandnya : 
+```
+git clone --branch pert2_sequelize https://github.com/Simad9/praktikum_tcc_2025-2026`
+```
 Selanjutnya silahkan `npm i` untuk install packagenya. \
 Di repo ini, sepertinya untuk .env tidak di hide, jadi tidak perlu diubah, jika sewaktu tidak ada .env pasti saya buat untuk .env.example.
 
@@ -28,4 +31,5 @@ Format branch `<pertemuan>_<nama_materi>`, contoh `pert2_prisma` --> materi untu
 
 1. Prak TCC_Pert 1 - Perkenalan TCC dan IAM : [https://youtu.be/WLWoEUz3cpY](https://youtu.be/WLWoEUz3cpY)
 2. Prak TCC_Pert 2 - ORM Sequalize dan Prisma : [https://youtu.be/hXMKKPdKPHc](https://youtu.be/hXMKKPdKPHc)
-3. Prak TCC_Pert 3 - React FE dan Cloud Storage : [Video On Progress]()
+3. Prak TCC_Pert 3.1 - Migrasi Web (Service BE) : [https://youtu.be/zLbyLk2twJ8](https://youtu.be/zLbyLk2twJ8)
+4. Prak TCC_Pert 3.2. - Service Frontend (React) : [Proses Pembuatan]()
