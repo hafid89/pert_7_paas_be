@@ -1,35 +1,35 @@
-# Praktikum TCC 2025/2026
+# Dokumentasi
+File ini dibuat untuk membantu memahami konsep database dan ORM di Node.js menggunakan Sequelize.
 
-Repo ini digunakan untuk materi praktikum TCC 2025/2026
+## Prerequisite
+1. Nodejs
+2. MySQL pake XAMPP
 
-## Yang harus dilakukan Praktikan :
+## Instalasi
+1. Setup projek node.js `npm init -y`
+2. install packagenya `npm install express mysql2 dotenv sequelize`
+3. install nodemon `npm i --save-dev nodemon`
 
-Silahkan buka branch pada repo ini untuk melihat materinya.\
-Karena materi bakal di upload di branch yang ada. 
-
-## Untuk yang mau Clone Repo :
-Untuk clone bisa, clone per branch dengan command `git clone --branch <nama_branch> https://github.com/Simad9/praktikum_tcc_2025-2026` \
-Contoh command misal mau clone branch pert2_sequelize maka commandnya : 
+## Langkah Yang dilakukan
+1. Buat struktur foldernya dulu
 ```
-git clone --branch pert2_sequelize https://github.com/Simad9/praktikum_tcc_2025-2026`
+config/ --> untuk  naruh config
+controllers/ --> untuk logika API nya
+models/ --> untuk query nya
+routes/ --> untuk route atau endopintnya
+schema/ --> untuk buat tabel database
+index.js --> untuk menjalankan server bisa juga server.js
 ```
-Selanjutnya silahkan `npm i` untuk install packagenya. \
-Di repo ini, sepertinya untuk .env tidak di hide, jadi tidak perlu diubah, jika sewaktu tidak ada .env pasti saya buat untuk .env.example.
+1. Ubah `.env.example` menjadi `.env` dan ubah seusai database kalian
+2. Buat file config/database.js untuk konekin sequalizenya
+3. Buat file schema/User.js untuk membuat tabel nya
+4. Buat file models/userModels.js untuk querynya
+5. Buat file controllers/userController.js untuk logika API nya
+6. Buat file routes/userRoutes.js untuk route API nya
+7. Buat file index.js untuk menjalankan server
+8. Sebelum menjalankan, buat dulu databasenya kalo eror
+9. Test API pake api.rest pake extenstion REST.API
 
-## Yang harus dilakukan kolaborator / Aslab (Asisten Lab) :
 
-Membuat materi jangan lupa dibuat branch dulu baru ngoding ya.\
-Format branch `<pertemuan>_<nama_materi>`, contoh `pert2_prisma` --> materi untuk pertemuan 2 tentang ORM Prisma .
-
-## List Materi :
-
-1. Perkenalan TCC (Materi PPT doang)
-2. Membuat BE masih dilokal = Pake Sequelize atau Prisma untuk ORM
-3. Membuat BE dengan Cloud Storage
-
-## Link Video Praktikum (yang saya bikin) :
-
-1. Prak TCC_Pert 1 - Perkenalan TCC dan IAM : [https://youtu.be/WLWoEUz3cpY](https://youtu.be/WLWoEUz3cpY)
-2. Prak TCC_Pert 2 - ORM Sequalize dan Prisma : [https://youtu.be/hXMKKPdKPHc](https://youtu.be/hXMKKPdKPHc)
-3. Prak TCC_Pert 3.1 - Migrasi Web (Service BE) : [https://youtu.be/zLbyLk2twJ8](https://youtu.be/zLbyLk2twJ8)
-4. Prak TCC_Pert 3.2. - Service Frontend (React) : [Proses Pembuatan]()
+### Tambahan Diluar
+Bisa juga gak pake nodemon, tapi pake `node --watch . index.js` , nanti kalo bisa restart kalo ada perubahan ketika di save
