@@ -1,42 +1,34 @@
-// Import Package dan File
-const express = require("express");
-const sequelize = require("./config/database");
-const userRoutes = require("./routes/userRoutes");
+const express = require('express');
+const cors = require('cors');
+const bodyParser = require('body-parser');
+const dotenv = require('dotenv');
+const noteRoutes = require('./routes/noteRoutes');
 
-// Inisialisasi Express dan Cors
+dotenv.config();
+
 const app = express();
-const cors = require("cors");
+const PORT = process.env.PORT || 3000;
 
-app.use(cors()); // Izinkan semua origin (bisa disesuaikan untuk produksi)
+app.use(cors());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
-// Izinkan origin frontend lokal yang umum dipakai saat development
-// app.use(
-//   cors({
-//     origin: [
-//       "http://localhost",
-//       "http://localhost:5173",
-//       "http://127.0.0.1:5500",
-//     ],
-//     methods: ["GET", "POST", "PUT", "DELETE"],
-//     credentials: true, // Jika butuh kirim cookie/session
-//   }),
-// );
+app.use('/api', noteRoutes);
 
-// Middleware untuk parsing JSON
-app.use(express.json());
-
-// Route dasar untuk testing
-app.get("/", (req, res) => {
-  res.send("Hello World!");
+app.get('/', (req, res) => {
+    res.json({
+        message: 'Notes API is running',
+        endpoints: {
+            getAll: 'GET /api/notes',
+            getById: 'GET /api/notes/:id',
+            create: 'POST /api/notes',
+            update: 'PUT /api/notes/:id',
+            delete: 'DELETE /api/notes/:id'
+        }
+    });
 });
 
-// Setting Routes
-require("./schema/User"); // Untuk generate Tabel Users
-app.use("/api/v1/users", userRoutes); // Untuk setting routes user
-
-// Sync Database dan Jalankan Server
-const port = process.env.PORT || 3000;
-sequelize.sync().then(() => {
-  console.log("Database synced");
-  app.listen(port, () => console.log(`Server running on port ${port}`));
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+    console.log(`API URL: http://localhost:${PORT}`);
 });
